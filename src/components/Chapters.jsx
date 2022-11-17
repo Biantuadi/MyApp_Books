@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Chapters = () => {
+const Chapters = ({chapters, selectedBook}) => {
     return (
         <>
-          <ul>
+
+<ul>
           {chapters.map((chapter) => (
-            
             (chapter.valid) ? (
               <li key={chapter.id} onClick={() => {
                 const book = books.find(book => book.id === selectedBook.id);
@@ -24,7 +24,9 @@ const Chapters = () => {
             </li>
             )
           ))}
-        </ul>  
+              
+        </ul>
+          
         </>
     );
 };

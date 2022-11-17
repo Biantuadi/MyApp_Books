@@ -4,6 +4,7 @@ body{
   margin: 0;
   padding: 0;
   width: 100%;
+  background-color: #282c34;
 }
 
 #root{
@@ -46,7 +47,17 @@ ul li{
   border: 2px solid #61dafb;
   width: 200px;
   border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 
+
+
+}
+
+li.book:hover{
+  transform: scale(1.06);
+  background-color: #61dafb;
+  color: #282c34;
 }
 
 ul li img{
@@ -68,4 +79,41 @@ ul li img{
 
 .selected{
   background-color: #61dafb;
+  color: #282c34;
+  transform: scale(1.06);
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #282c34;
+  color: white;
+  height: 10vh;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  width: 90%;
+
+}
+
+nav span{
+  margin: 10px;
+  cursor: pointer;
+  border: 2px solid #61dafb;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.activeNav{
+  background-color: #61dafb;
+  color: #282c34;
+
+}
+
+.selected{
+  background-color: #61dafb;
+  color: #282c34;
+  transform: scale(1.06);
 }
