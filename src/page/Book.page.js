@@ -1,6 +1,7 @@
 import React from 'react';
 import Books from '../components/Books';
 import { useState } from 'react';
+import laravel from "./laravel.png"
 
 const BookPage = () => {
 
@@ -18,7 +19,13 @@ const BookPage = () => {
     return (
         <div className='myApp'>
 
+
         <header>
+
+            <div className="img_logo">
+                <img src={laravel} alt="laravel_img_logo"/>
+
+            </div>
         <nav>
             <span className={all ? "activeNav" : ""} onClick={() => { setAll(true); setLevel1(false); setLevel2(false); setLevel3(false); setLevel4(false); setLevel5(false); setLevel6(false); }}>All</span>
             <span className={level1 ? "activeNav" : ""} onClick={() => { setAll(false); setLevel1(true); setLevel2(false); setLevel3(false); setLevel4(false); setLevel5(false); setLevel6(false); }}>Level 1</span>
