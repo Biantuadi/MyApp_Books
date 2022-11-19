@@ -37,22 +37,15 @@ const Books = ({ all, level1, level2, level3, level4, level5, level6 }) => {
   }, [selectedBook]);
 
   const handleBookClick = (book) => {
-    const liId = document.querySelectorAll(".book");
-    liId.forEach((li) => {
-      li.classList.remove("selected");
-    });
+   
+    document.querySelector(".chapters").classList.add('show_chapters');
     document.getElementById(book.id).classList.add("selected");
     setSelectedBook(book);
-    console.log(book.levels[0].name);
   };
 
   return (
     <>
       <div className="books">
-        {/* <li className="book">
-            <img src={yes} alt="" />
-          <p>Text</p>
-        </li> */}
 
         {all &&
           books.map((book) =>
@@ -173,13 +166,14 @@ const Books = ({ all, level1, level2, level3, level4, level5, level6 }) => {
 
       <div
         className="chapters"
-        style={{ display: selectedBook ? "flex" : "none" }}
       >
+        <i 
+        className="fas fa-times"
+        onClick={() => { document.querySelector(".chapters").classList.remove('show_chapters') }}
+        ></i>
         <h1>Chapters</h1>
 
-        
-
-        <Chapters chapters={chapters} selectedBook={selectedBook} books={books}/>
+        <Chapters chapters={chapters} />
       </div>
     </>
   );
