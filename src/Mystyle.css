@@ -128,16 +128,9 @@ div.books{
     
     display: flex;
     flex-direction: column;
-}
-
-.chapters_container{
-
-    display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
     overflow: auto;
+    visibility: hidden;
 }
 
 .chapter{
@@ -147,6 +140,7 @@ div.books{
     border-radius: 30px;
     margin: 15px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+    
 
     
 }
@@ -156,9 +150,22 @@ div.books{
     width: 70px;
     height: 70px;
     border-radius: 50%;
-
+    text-overflow: ellipsis;
 }
 
-.none{
+.chapters::-webkit-scrollbar {
     display: none;
+}
+
+.show_chapters{
+    visibility: visible;
+}
+
+i.fas.fa-times{
+    position: absolute;
+    top: 16px;
+    right: 28px;
+    font-size: 1.5em;
+    color: rgb(255, 22, 22);
+    cursor: pointer;
 }
